@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class dev1 {
+    public static void main(String[] args) {
+        int kilo;
+        float boy;
+        Scanner input = new Scanner(System.in);
+        System.out.print("kilonuzu giriniz:");
+        kilo = input.nextInt();
+        System.out.print("Boyunuzu giriniz:");
+        boy = input.nextFloat();
+        double VKE = kilo/Math.pow(boy,2);
+        System.out.println("VKE: " + VKE);
+    }
+}
