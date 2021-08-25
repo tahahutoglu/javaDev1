@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class dev1 {
+    public static void main(String[] args) {
+        int gidilenMesafe,aciliş = 10;
+        double taksimetre = 2.20;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Gidilen mesafeyi giriniz:");
+        gidilenMesafe = input.nextInt();
+        double tutar = gidilenMesafe*taksimetre+aciliş;
+        double odenecek = tutar < 20 ? 20.0 : tutar;
+        System.out.println("Ödenecek tutar: " + odenecek);
+    }
+}
