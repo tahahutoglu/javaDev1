@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class dev1 {
+    public static void main(String[] args) {
+        int dikKenar1, dikKenar2;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Hipotenüs için 1. kenar");
+        dikKenar1 = input.nextInt();
+        System.out.println("Hipotenüs için 2. kenar");
+        dikKenar2 = input.nextInt();
+        double hipotenus = Math.sqrt(Math.pow(dikKenar1,2) + Math.pow(dikKenar2,2));
+        System.out.println("Hipotenüs: " + hipotenus);
+        int kenar1,kenar2,kenar3;
+        System.out.println("Alan için 1. kenar");
+        kenar1 = input.nextInt();
+        System.out.println("Alan için 2. kenar");
+        kenar2 = input.nextInt();
+        System.out.println("Alan için 3. kenar");
+        kenar3 = input.nextInt();
+        double u = (kenar1+kenar2+kenar3)/2;
+        double alan = Math.sqrt(u*(u-kenar1)*(u-kenar2)*(u-kenar3));
+        System.out.println("Alan : " + alan);
+    }
+}
