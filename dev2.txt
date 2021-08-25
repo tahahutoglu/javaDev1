@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class dev1 {
+    public static void main(String[] args) {
+        double tutar;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Hesaplanacak tutarı giriniz: ");
+        tutar = input.nextDouble();
+        double kdv,fiyat,kdvYuzdesi;
+        kdvYuzdesi = tutar > 1000 ? 8 : 18;
+        kdv = tutar*kdvYuzdesi/100;
+        fiyat = kdv + tutar;
+        System.out.println("KDV/'siz fiyat = " + tutar);
+        System.out.println("KDV/'li fiyat = " + fiyat);
+        System.out.println("KDV tutarı = " + kdv);
+    }
+}
