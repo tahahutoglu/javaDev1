@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class dev1 {
+    public static void main(String[] args) {
+        String kullaniciAdi,sifre,yeniSifre;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Kullanıcı adınızı giriniz: ");
+        kullaniciAdi = input.nextLine();
+        System.out.print("Şifrenizi adınızı giriniz: ");
+        sifre = input.nextLine();
+        if(kullaniciAdi.equals("patika") && sifre.equals("java101")){
+            System.out.println("Giriş başarılı");
+        }else{
+            System.out.println("Giriş başarısız, şifrenizi sıfırlamak isterseniz 1 e basın");
+            int kullaniciGirisi = input.nextInt();
+            if(kullaniciGirisi == 1){
+                System.out.print("Yeni şifrenizi giriniz");
+                Scanner sifreGiris = new Scanner(System.in);
+                yeniSifre = sifreGiris.nextLine();
+                if(yeniSifre.equals("java101")){
+                    System.out.println("yeni girilen şifre eski şifrenizle aynı olamaz");
+                }else if(yeniSifre.equals(sifre)){
+                    System.out.println("yeni şifre önceki denediğiniz ile aynı olamaz");
+                }
+            }else{
+                System.out.println("çıkış yaptınız!");
+            }
+        }
+    }
+}
