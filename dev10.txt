@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class dev1 {
+    public static void main(String[] args) {
+        int mat, fiz, turk, kim, muz;
+        int toplam = 0,dersSayisi=0;
+        Scanner input = new Scanner(System.in);
+        System.out.print("matematik notunuzu giriniz: ");
+        mat = input.nextInt();
+        if(mat>=0 && mat<100) {
+            toplam+=mat;
+            dersSayisi++;
+        }
+        System.out.print("fizik notunuzu giriniz: ");
+        fiz = input.nextInt();
+        if(fiz>=0 && fiz<100) {
+            toplam+=fiz;
+            dersSayisi++;
+        }
+        System.out.print("turkce notunuzu giriniz: ");
+        turk = input.nextInt();
+        if(turk>=0 && turk<100) {
+            toplam+=turk;
+            dersSayisi++;
+        }
+        System.out.print("kimya notunuzu giriniz: ");
+        kim = input.nextInt();
+        if(kim>=0 && kim<100) {
+            toplam+=kim;
+            dersSayisi++;
+        }
+        System.out.print("müzik notunuzu giriniz: ");
+        muz = input.nextInt();
+        if(muz>=0 && muz<100) {
+            toplam+=muz;
+            dersSayisi++;
+        }
+        double sonuc = toplam/dersSayisi;
+        if(sonuc>=55){
+            System.out.println("Tebrikler Geçtiniz!\n Sonuc: " + sonuc);
+        }else{
+            System.out.println("Malesef kaldınız!\nSonuc: " + sonuc);
+        }
+    }
+}
