@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main
+{
+    public static int Is_Prime(int entered_number , int previous_numbers){
+     
+    if(entered_number < 2)
+    return 0;
+     
+    if(previous_numbers == entered_number){
+        return 1;
+    }
+     
+    if(entered_number % previous_numbers == 0)
+        return 0;
+     
+    return Is_Prime(entered_number,previous_numbers+1);
+     
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("alt sayı giriniz:");
+        int sayi = scan.nextInt();
+        int sonuc = Is_Prime(sayi, 2);
+        if(sonuc == 1){
+            System.out.println("asaldır");
+        }else{
+            System.out.println("değildir");
+        }
+    }
+}
