@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.print("Kaç sayı giriceksiniz?");
+	    Scanner input = new Scanner(System.in);
+	    int sayi = input.nextInt();
+	    int min=0,max=0,girilen;
+	    for(int i=0;i<sayi;i++){
+	        System.out.print(i+1 + ". sayıyı giriniz: ");
+	        girilen = input.nextInt();
+	        if(girilen<min){
+	            min = girilen;
+	        }else if(girilen > max){
+	            max = girilen;
+	        }
+	    }
+	    System.out.println("Girilenler arasından max sayı: " + max);
+	    System.out.println("Girilenler arasından min sayı: " + min);
+	}
+}
