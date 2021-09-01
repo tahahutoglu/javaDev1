@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main
+{
+    public static int sekilInıs(int N, int count){
+            if(N<=0){
+                System.out.print(N + " ");
+                return sekilArtıs(N+5,count);
+            };
+            System.out.print(N + " ");
+            return sekilInıs(N-5, count+1);
+    }
+    
+    public static int sekilArtıs(int N,int count){
+            if(count<=0){
+                return 0;
+            };
+            System.out.print(N + " ");
+            return sekilArtıs(N+5,count-1);
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("alt sayı giriniz:");
+        int sayi = scan.nextInt();
+        sekilInıs(sayi,0);
+    }
+}
