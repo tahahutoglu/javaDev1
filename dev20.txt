@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main
+{
+    public static int faktoriyel(int n){
+        if(n == 0)return 1;
+        return n*faktoriyel(n-1);
+    }
+	public static void main(String[] args) {
+		int n=5,r=2;
+		int comb = faktoriyel(n)/(faktoriyel(r) * faktoriyel(n-r));
+		System.out.println(comb);
+        
+	}
+}
