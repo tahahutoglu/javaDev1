@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		int n,toplam=0;
+		System.out.println("bir sayı giriniz: ");
+		Scanner input = new Scanner(System.in);
+		n = input.nextInt();
+		while(n>0){
+		    toplam+=n%10;
+		    n/=10;
+		}
+		System.out.println(toplam);
+	}
+}
