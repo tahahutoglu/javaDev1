@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		int girilen,toplam=0,count=0;
+        double ort;
+        Scanner input = new Scanner(System.in);
+        girilen = input.nextInt();
+        
+        for(int i=0;i<girilen;i++){
+            if(i%3==0 || i%4==0){
+                toplam+=i;
+                count++;
+            }
+        }
+        ort = toplam/count;
+        System.out.println(ort);
+	}
+}
