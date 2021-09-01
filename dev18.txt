@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		int girilen,toplam=0;
+        Scanner input = new Scanner(System.in);
+        do{
+            System.out.print("bir sayı giriniz: ");
+            girilen = input.nextInt();
+            if(girilen%2 == 0 || girilen %4 == 0) toplam+=girilen;
+        }while(girilen%2==0);
+        System.out.print("Sonuc: " + toplam);
+        
+	}
+}
